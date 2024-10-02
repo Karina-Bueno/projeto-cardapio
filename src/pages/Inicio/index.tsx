@@ -1,5 +1,7 @@
 import cardapio from 'data/cardapio.json';
 import styles from './inicio.module.scss';
+import stylesTema from 'styles/Tema.module.scss';
+import nossaCasa from 'assets/Imagens para o vídeo Terminando a tela Início/nossa_casa.png';
 
 export default function Inicio() {
   let pratosRecomendados = [...cardapio];
@@ -20,7 +22,14 @@ export default function Inicio() {
             </button>
           </div>
         ))}
-      </div>
+			</div>
+			<h3 className={stylesTema.titulo}>Nossa casa</h3>
+			<div className={styles.nossaCasa}>
+				<img src={nossaCasa} alt="Casa do aluroni" />
+				<div className={styles.nossaCasa__endereco}>
+					Rua Vergueiro, 3185 <br /> <br /> Vila Marina - SP
+				</div>
+			</div>
     </section>
   );
 }

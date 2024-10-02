@@ -21,9 +21,11 @@
     "@typescript-eslint"
   ],
   "rules": {
+		"no-mixed-spaces-and-tabs": 0, // disable rule
     "react/react-in-jsx-scope": "off",
     "indent": [
-      "4"
+      "error",
+      4
     ],
     "linebreak-style": [
       "error",
