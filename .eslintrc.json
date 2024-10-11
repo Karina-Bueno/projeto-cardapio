@@ -23,12 +23,7 @@
   "rules": {
 		"no-mixed-spaces-and-tabs": 0, // disable rule
     "react/react-in-jsx-scope": "off",
-    "indent": "",
-
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
+		"linebreak-style": 0,
     "quotes": [
       "error",
       "single"

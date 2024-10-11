@@ -9,22 +9,22 @@ import NotFound from 'pages/NotFound';
 import Prato from 'pages/Prato';
 
 export default function AppRouter() {
-  return (
-    <main className='container'>
-      <Router>
-        <Menu />
-        <Routes>
-          {/* funciona como um switch, sempre param na primeira rota que ele encontra */}
-          <Route path='/' element={<PaginaPadrao />}>
+	return (
+		<main className='container'>
+			<Router>
+				<Menu />
+				<Routes>
+					{/* funciona como um switch, sempre param na primeira rota que ele encontra */}
+					<Route path='/' element={<PaginaPadrao />}>
 						<Route index element={<Inicio />} />
 						<Route path='cardapio' element={<Cardapio />} />
-						<Route path='prato/:id' element={<Prato />} />
 						<Route path='sobre' element={<Sobre />} />
 					</Route>
+					<Route path='prato/:id' element={<Prato />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 				<Footer />
-      </Router>
-    </main>
-  );
+			</Router>
+		</main>
+	);
 }
